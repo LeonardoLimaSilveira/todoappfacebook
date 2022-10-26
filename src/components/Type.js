@@ -17,7 +17,7 @@ const Type = () => {
   const body = document.querySelector('body')
   theme ? body.classList.remove('darkBody') : body.classList.add('darkBody')
   function handleEnter(e) {
-    if (e.keyCode === 13 && !e.target.value == '') {
+    if (e.keyCode === 13 && !e.target.value === '') {
       setTask([
         ...task,
         {
@@ -80,8 +80,7 @@ const Type = () => {
                 item.id = 0
 
                 task.filter((item, index) => {
-                  item.id === 0 ? task.splice(index, 1) : ''
-                  return true
+                  return item.id === 0 ? task.splice(index, 1) : ''
                 })
 
                 setRemove(!remove)
@@ -107,17 +106,6 @@ const Type = () => {
           ? all.map(item => {
               function handleCheck() {
                 item.check = !item.check
-
-                setRemove(!remove)
-              }
-
-              function handleDelete() {
-                item.id = 0
-
-                task.filter((item, index) => {
-                  item.id === 0 ? task.splice(index, 1) : ''
-                  return true
-                })
 
                 setRemove(!remove)
               }
@@ -159,7 +147,7 @@ const Type = () => {
           : ''}
         <div className="taskInfos">
           <div className="taskCount">
-            {task.length == 1 ? (
+            {task.length === 1 ? (
               <span>{task.length} item left</span>
             ) : (
               <span>{task.length} items left</span>
