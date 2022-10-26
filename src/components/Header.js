@@ -6,7 +6,11 @@ import dark from '../assets/todo-app-main/images/bg-desktop-dark.jpg'
 
 const Header = () => {
   const [theme] = useContext(GlobalContext)
-  return <header>{theme ? <img src={ligth} /> : <img src={dark} />}</header>
+  return (
+    <header>
+      <img src={theme ? ligth : dark} alt="" />
+    </header>
+  )
 }
 
 export default Header

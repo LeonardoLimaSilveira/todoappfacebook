@@ -4,3 +4,6 @@ header {
   background-size: cover;
   height: 22rem;
 }
+img {
+  width: 100%;
+}

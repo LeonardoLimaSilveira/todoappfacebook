@@ -17,7 +17,7 @@ const Type = () => {
   const body = document.querySelector('body')
   theme ? body.classList.remove('darkBody') : body.classList.add('darkBody')
   function handleEnter(e) {
-    if (e.keyCode === 13 && !e.target.value === '') {
+    if (e.keyCode === 13 && e.target.value !== '') {
       setTask([
         ...task,
         {
