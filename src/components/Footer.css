@@ -1,0 +1,20 @@
+.footerDiv {
+  margin-top: 10rem;
+  display: flex;
+  justify-content: center;
+}
+.footerDiv a {
+  margin: 0 0.5rem;
+  text-decoration: none;
+}
+.footerDivDark {
+  color: white;
+  margin-top: 10rem;
+  display: flex;
+  justify-content: center;
+}
+.footerDivDark a {
+  margin: 0 0.5rem;
+  text-decoration: none;
+  color: aqua !important;
+}

@@ -4,6 +4,7 @@ import './App.css'
 import Slogan from './components/Slogan'
 import { ThemeChange } from './components/ThemeContext'
 import Type from './components/Type'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Header />
       <Slogan />
       <Type />
+      <Footer />
     </ThemeChange>
   )
 }

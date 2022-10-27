@@ -92,7 +92,7 @@ const Type = () => {
                     <div className={'iconCheck'} onClick={handleCheck}>
                       {item.check ? <Check /> : ''}
                     </div>
-                    <span>{item.text}</span>
+                    <span onClick={handleCheck}>{item.text}</span>
                   </div>
                   {theme ? (
                     <Close className={'closeIcon'} onClick={handleDelete} />
@@ -116,7 +116,7 @@ const Type = () => {
                     <div className={'iconCheck'} onClick={handleCheck}>
                       {item.check ? <Check /> : ''}
                     </div>
-                    <span>{item.text}</span>
+                    <span onClick={handleCheck}>{item.text}</span>
                   </div>
                 </div>
               ) : (
@@ -137,7 +137,7 @@ const Type = () => {
                     <div className={'iconCheck'} onClick={handleCheck}>
                       {item.check ? <Check /> : ''}
                     </div>
-                    <span>{item.text}</span>
+                    <span onClick={handleCheck}>{item.text}</span>
                   </div>
                 </div>
               ) : (

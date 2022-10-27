@@ -17,7 +17,7 @@
   justify-content: center;
   align-items: center;
   margin-top: -4rem;
-  box-shadow: 1px 1px 10px hsl(234, 11%, 52%);
+  box-shadow: 0.3px 0.3px 5px hsl(234, 11%, 52%);
   border-radius: 0.31rem;
 }
 .task {
@@ -26,29 +26,29 @@
   justify-content: space-between;
   width: 100%;
   height: 4.3rem;
-  border-bottom: 2px solid hsl(236, 9%, 61%);
+  border-bottom: 1px solid hsl(236, 9%, 61%);
   color: hsl(235, 19%, 35%);
   font-weight: bold;
   font-size: 1rem;
 }
-.task span {
-  cursor: default;
-}
+
 .taskDark {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   height: 4.3rem;
-  background: hsl(237, 14%, 26%);
-  border-bottom: 2px solid white;
-  color: hsl(235, 19%, 35%);
-  font-weight: bold;
+  background: hsl(235, 24%, 19%);
+  border-bottom: 1px solid hsl(235, 19%, 35%);
+  color: hsl(234, 39%, 85%);
+  font-weight: 700;
   font-size: 1rem;
 }
-.taskDark {
-  color: white;
+.taskDark:first-child {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
+
 .IconText {
   display: flex;
   align-items: center;
@@ -57,7 +57,7 @@
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
-  border: 2px solid hsl(233, 11%, 84%);
+  border: 1px solid hsl(233, 11%, 84%);
   margin-right: 1.5rem;
   margin-left: 2rem;
   cursor: default;
@@ -85,7 +85,14 @@
   justify-content: space-between;
   color: hsl(236, 9%, 61%);
   font-size: 0.9rem;
-  border-bottom: 2px solid hsl(236, 9%, 61%);
+  border-bottom: 1px solid hsl(236, 9%, 61%);
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.taskContainerDark .taskInfos {
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background-color: hsl(235, 24%, 19%);
 }
 .taskCount span {
   cursor: default;
@@ -94,8 +101,7 @@
 .selectTask span:not(:first-child) {
   margin-left: 10px;
 }
-.selectTask span:hover,
-.Clear span:hover {
+.taskContainer .taskInfos span:hover {
   color: black;
 }
 .check .iconCheck {
@@ -119,7 +125,7 @@
 }
 .taskContainerDark .taskInfos {
   color: hsl(234, 11%, 52%);
-  border-bottom: 2px solid white;
+  border-bottom: 1px solid hsl(235, 19%, 35%);
 }
 .taskContainerDark .selectTask span:hover,
 .Clear span:hover {
@@ -133,4 +139,26 @@
 .all {
   color: hsl(220, 98%, 61%) !important;
   font-weight: bold;
+}
+
+@media (max-width: 40rem) {
+  .taskContainer,
+  .taskContainerDark {
+    max-width: 33rem;
+  }
+  .task,
+  .taskDark {
+    min-height: 6rem;
+    font-size: 1.5rem;
+  }
+  .taskInfos {
+    height: 3rem;
+  }
+  .taskInfos span {
+    font-size: 1rem;
+  }
+  .iconCheck {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
 }
