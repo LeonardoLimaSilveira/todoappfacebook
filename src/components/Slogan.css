@@ -19,6 +19,6 @@ span {
 
 @media (max-width: 40rem) {
   .slogan {
-    max-width: 33rem;
+    max-width: 20rem;
   }
 }

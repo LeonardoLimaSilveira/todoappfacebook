@@ -4,7 +4,7 @@ import { GlobalContext } from './ThemeContext'
 const Footer = () => {
   const [theme] = React.useContext(GlobalContext)
   return (
-    <div class={theme ? 'footerDiv' : 'footerDivDark'}>
+    <div className={theme ? 'footerDiv' : 'footerDivDark'}>
       Challenge by
       <a
         href="https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW"

@@ -14,7 +14,11 @@ const Header = () => {
     const { matches } = window.matchMedia('(max-width:40rem)')
     setMatch(matches)
   })
-
+  React.useEffect(() => {
+    if (window.innerWidth < 641) {
+      setMatch(true)
+    }
+  }, [])
   return (
     <header>
       {match ? (

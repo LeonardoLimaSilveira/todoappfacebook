@@ -18,3 +18,16 @@
   text-decoration: none;
   color: aqua !important;
 }
+@media (max-width: 24rem) {
+  .footerDiv,
+  .footerDivDark {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .footerDiv a,
+  .footerDivDark a {
+    margin: 0.8rem 0;
+  }
+}
