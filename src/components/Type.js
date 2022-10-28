@@ -13,6 +13,7 @@ const Type = () => {
   const [active, setActive] = React.useState(false)
   const [completed, setCompleted] = React.useState(false)
   const [theme] = React.useContext(GlobalContext)
+  const [check, setCheck] = React.useState([])
 
   const body = document.querySelector('body')
   theme ? body.classList.remove('darkBody') : body.classList.add('darkBody')
@@ -43,6 +44,11 @@ const Type = () => {
     } else {
       window.localStorage.setItem('task', [])
     }
+    setCheck(
+      task.filter(item => {
+        return !item.check ? item : ''
+      })
+    )
   }, [task, remove])
 
   function handleCompleted() {
@@ -63,7 +69,9 @@ const Type = () => {
     }
     setActive(true)
   }
-
+  function clearAll() {
+    if (check.length !== 0) setTask([...check])
+  }
   return (
     <>
       <Input type="text" onKeyDown={handleEnter} />
@@ -174,7 +182,7 @@ const Type = () => {
             </span>
           </div>
           <div className="Clear">
-            <span>Clear Completed</span>
+            <span onClick={clearAll}>Clear Completed</span>
           </div>
         </div>
       </div>
