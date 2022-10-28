@@ -1,5 +1,5 @@
 .footerDiv {
-  margin-top: 10rem;
+  margin-top: 7rem;
   display: flex;
   justify-content: center;
 }
@@ -18,7 +18,7 @@
   text-decoration: none;
   color: aqua !important;
 }
-@media (max-width: 24rem) {
+@media (max-width: 40rem) {
   .footerDiv,
   .footerDivDark {
     display: flex;

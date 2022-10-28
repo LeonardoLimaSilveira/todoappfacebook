@@ -7,13 +7,19 @@ import { ReactComponent as Sun } from '../assets/todo-app-main/images/icon-sun.s
 const Teste = () => {
   const [dark, setDark] = React.useContext(GlobalContext)
 
+  React.useEffect(() => {
+    if (localStorage.key('theme')) {
+      setDark(JSON.parse(localStorage.getItem('theme')))
+    }
+  }, [])
   return (
     <div className={'slogan'}>
       <h1>Todo</h1>
       <GlobalContext.Provider value={(dark, setDark)}>
         <span
           onClick={() => {
-            setDark(!dark)
+            window.localStorage.setItem('theme', !dark)
+            setDark(JSON.parse(localStorage.getItem('theme')))
           }}
         >
           {dark ? <Moon /> : <Sun />}

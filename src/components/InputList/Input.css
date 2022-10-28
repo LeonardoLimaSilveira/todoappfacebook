@@ -56,10 +56,14 @@ input::placeholder {
 }
 
 @media (max-width: 40rem) {
-  .InputContainer,
+  .InputContainer {
+    max-width: 20rem;
+
+    box-shadow: 1px 1px 10px hsl(233, 11%, 84%);
+  }
   .InputContainerDark {
     max-width: 20rem;
-    box-shadow: 1px 1px 4px black;
+    box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.1);
   }
   .InputCircle {
     width: 2rem;
